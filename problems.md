@@ -9,3 +9,6 @@
 - bei nicht ausgefüllten Tests sollte auch in der Evaluierungsspalte ein Missingwert eingetragen sein (schwierig bei Textevaluierungen)
     - momentan bei numerischen Werten 0 bei Evaluierung. Beispiel: BDIII hat eine Beobachtung mit Missing: nicht ausgefüllt. Die Evaluierung hat Zahl 0, deutet auf minimale Depression. ist das vertretbar, oder unsinnig?
       offensichtlich werden missings ja schon absichtlich in datenbak so abgefangen.
+
+
+- Namen von Fragebögen teilweise zu lang. Namen von Formaten entsprechend auch zu lang
