@@ -1,0 +1,3 @@
+- Label in CRF hasewriv werden nicht korrekt angezeigt
+- Formate für Tests  maia1 und maia2 werden nicht vollständig angezeigt
+- bei nicht ausgefüllten Tests sollte auch in der Evaluierungsspalte ein Missingwert eingetragen sein (schwierig bei Textevaluierungen)
