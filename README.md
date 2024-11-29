@@ -58,7 +58,7 @@ Die Variable `value` wird numerisch.
 Zusätzlich wird mit `proc sort nodupkey` eine Tabelle `var_labels` erstellt, die den Namen der Variablen und ihr Label beinhaltet.
 
 **`crfs`**
-"-" und ":" werden aus den Einträgen `crf_name` entfernt. SAS erkennt diese beiden Zeichen beim Erstellen neuer Tabellen nicht an.
+"-" werdein in `crf_name` in "_" umgewandelt. ":" und Leerzeichen werden entfernt. SAS erkennt diese beiden Zeichen beim Erstellen neuer Tabellen nicht an.
 
 Mit `proc sort` wird eine Tabelle erstellt, die nur die Namen der vorkommenden Tests enthält.
 
