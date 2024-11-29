@@ -7,3 +7,5 @@
     -  genaues Problem: bei Werten 2,3,4 werden nicht Formate angezeigt, sondern numerischer Wert bleibt bestehen
     - GELÖST: in der Tabelle items_codes sind an diesen Stellen die numerischen Werte identisch mit den Charakterwerten
 - bei nicht ausgefüllten Tests sollte auch in der Evaluierungsspalte ein Missingwert eingetragen sein (schwierig bei Textevaluierungen)
+    - momentan bei numerischen Werten 0 bei Evaluierung. Beispiel: BDIII hat eine Beobachtung mit Missing: nicht ausgefüllt. Die Evaluierung hat Zahl 0, deutet auf minimale Depression. ist das vertretbar, oder unsinnig?
+      offensichtlich werden missings ja schon absichtlich in datenbak so abgefangen.
