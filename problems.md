@@ -1,4 +1,6 @@
 - Label in CRF hasewriv werden nicht korrekt angezeigt
+    - genaues Problem: Label für diesen Test sind mit HTML-Code zugemüllt (erwartet, Problem bei originalen Daten)
+    - nicht alle Label werden auf Test übertragen
 - Formate für Tests  maia1 und maia2 werden nicht vollständig angezeigt
     -  genaues Problem: bei Werten 2,3,4 werden nicht Formate angezeigt, sondern numerischer Wert bleibt bestehen
     - GELÖST: in der Tabelle items_codes sind an diesen Stellen die numerischen Werte identisch mit den Charakterwerten
