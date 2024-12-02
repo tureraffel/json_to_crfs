@@ -145,3 +145,21 @@ Das Makro `%export_sav` nimmt die Parameter `table`, `filepath` und `lib`. Bevor
 
 ### 3. `%apply_makro_to_lib`
 Das Makro `%apply_makro_to_lib` nimmt ein Makro als Parameter, um dieses auf jede Tabelle in der `library` anzuwenden. Es nimmt auch einen Dateipfad als optionalen Parameter, falls das eingefügte Makro das benötigt.
+
+
+## Bestehende Probleme
+- Die Namen der Fragebögen sind teils zu lang (länger als 32 Zeichen). Die Namen der Formate sind dann noch länger, weshalb SAS Warnungen und Fehlermeldungen ausgibt. Die Formate werden richtig dargestellt und zugeordnet. Trotzdem ist das eine mögliche Fehlerquelle, auf die geachtet werden sollte.
+- Label für den Test Hase-Wri-V werden nicht korrekt angezeigt. Grund dafür ist HTML-Code innerhalb der Label, insbesondere der Charakter `&nbsp`, der von SAS als nicht zugewiesene Makrovariable gelesen wird. Aus diesem Grund sind einige der Label nicht verfügbar. Obwohl dieses Problem programmatisch abgefangen werden könnte, habe ich mich dagegen entschieden; das Problem muss sowieso auf Seiten der Datenbank gelöst werden.
+- Für die Tests Maia-1 und Maia-2 wird die richtige Bedeutung der ordinalen numerischen Werte teilweise nicht im Format angezeigt. Auch liegt an den eingelesenen Daten, die korrekt dargestellt werden.    
+
+**Beispiel:**
+
+| nvalue | cvalue |
+|--------|--------|
+|1|immer|
+|2|2|
+|3|3|
+|4|4|
+|5|nie|
+
+- Bei nicht ausgefüllten Tests enthalten die Spalten für Evaluierung Werte. Beispielsweise hat der Test BDI-II bei einem nicht ausgefüllten Test die Evaluierung 0, deutent auf eine leichte/nicht vorhandene Depression.
