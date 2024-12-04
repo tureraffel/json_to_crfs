@@ -1,7 +1,7 @@
 # SAS-Skript zum Import von PsyClinica-Daten im JSON-Format
 
 ****
-## import_json_format_eval_2811_done.sas
+## jsons_to_crfs_tables.sas
 Dieses Skript erstellt aus der importierten JSON für jeden durchgeführten CRF eine Tabelle. Variablen sind die Patienten ID, einzelne Fragen des CRFs und die Evaluiering (falls vorhanden).
 
 ## Nutzung
