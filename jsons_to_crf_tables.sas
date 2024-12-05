@@ -58,6 +58,25 @@ create table t_missings
 	values(99973, .A, "UNKNOWN");
 quit;
 
+
+proc format;
+	value $gender_format
+		"m" = "männlich"
+		"w" = "weiblich"
+		"d" = "divers";
+run;
+
+/*creates a table patients with patient_id etc. to be exported as well*/
+data patients (drop=ordinal_root);
+set root;
+label 	patient_id = "Patienten ID"
+		gender = "Geschlecht"
+		age = "Alter in Jahren"
+		months = "Monate";
+format gender $gender_format.;
+run;
+
+
 data old_crfs_items;
 set crfs_items;
 run;
@@ -463,18 +482,24 @@ EXAMPLE: bfi-10 becomes bfi_10*/
 		
     %end;
 
+	/*show notes again*/
+	options notes;
+
 	/*export formats into lib e*/
 	proc catalog cat=work.formats;
 		copy out=e.formats;
 	quit;
 
 	options fmtsearch=(e.formats);
-	
-	options notes;
 
 	/*export t_missings aswell. key for formats maybe*/
 	data e.t_missings;
 	set t_missings;
+	run;
+
+	/*export patients*/
+	data e.patients;
+	set patients;
 	run;
 
 %mend;
