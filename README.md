@@ -7,7 +7,7 @@ Dieses Skript erstellt aus der importierten JSON für jeden durchgeführten CRF 
 ## Nutzung
 
 **`import_json_eval_2811_done.sas`**    
-Definiere `jsonlib ` als Pfad der gespeicherten JSON. Definiere die Bibliotheken `out` und `e`. Dort werden die Tabellen gespeichert. Diese 3 Bibliotheken befinden sich am Anfang des Skriptes. Danach führe das gesamte Skript aus. Dies wird einige Zeit in Anspruch nehmen (der Großteil davon ist das dynamische Erstellen von Formaten für jede Variable.)
+Definiere `jsonlib ` als Pfad der gespeicherten JSON. Definiere die Bibliotheken `out` und `e`. Dort werden die Tabellen gespeichert. Diese 3 Bibliotheken befinden sich am Anfang des Skriptes. Danach führe das gesamte Skript aus. Dies wird einige Zeit in Anspruch nehmen (der Großteil davon ist das dynamische Erstellen von Formaten für jede Variable.) **Wichtig:** Die Dateien überschreiben andere Dateien mit gleichen Namen in der Bibliothek. Neue Tabellen werden nicht an alte Tabellen angefügt.  
 
 **`exporting_savs.sas`**    
 Führe dieses Skript als zweites aus. Definiere am Anfang dieses Skripts die Makrovariable `sav_folder` als das Verzeichnis, in dem fertiggestellte .sav-Dateien abgelegt werden sollen.
