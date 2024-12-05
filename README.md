@@ -3,7 +3,7 @@
 ****
 ## jsons_to_crfs_tables.sas
 Dieses Skript erstellt aus der importierten JSON für jeden durchgeführten CRF eine Tabelle. Variablen sind die Patienten ID, einzelne Fragen des CRFs und die Evaluiering (falls vorhanden).
-
+Es wird auch die Hilfstabelle `t_missings` erstellt. Diese hilft beim Aufschlüsseln von Missing-Werten. Außerdem wird eine Tabelle `Patients` erstellt, in der sich demographische Daten zu den Patienten befinden.
 ## Nutzung
 
 **`import_json_eval_2811_done.sas`**    
