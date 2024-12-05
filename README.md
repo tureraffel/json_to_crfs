@@ -163,4 +163,4 @@ Das Makro `%apply_makro_to_lib` nimmt ein Makro als Parameter, um dieses auf jed
 |4|4|
 |5|nie|
 
-- Bei nicht ausgefüllten Tests enthalten die Spalten für Evaluierung Werte. Beispielsweise hat der Test BDI-II bei einem nicht ausgefüllten Test die Evaluierung 0, deutent auf eine leichte/nicht vorhandene Depression.
+- Bei nicht ausgefüllten Tests enthalten die Spalten für Evaluierung Werte. Beispielsweise hat der Test BDI-II bei einem nicht ausgefüllten Test die Evaluierung 0, deutend auf eine leichte/nicht vorhandene Depression.
