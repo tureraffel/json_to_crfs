@@ -1,3 +1,5 @@
+/*FÃ¼r Informationen/Dokumentation lies mein README*/
+
 /* Aktivieren der JSON Engine und Optionen setzen */
 options validvarname=any;
 options noquotelenmax;
@@ -41,7 +43,7 @@ options fmtsearch=(e.formats); /*formate werden hier abgelegt*/
     %end;
 %mend;
 
-/* Macro ausführen */
+/* Macro ausfÃ¼hren */
 %import_all_tables;
 
 /*create a table for missing values to be stored in*/
@@ -52,8 +54,8 @@ create table t_missings
 	format_comment char(50));
 
 	insert into t_missings
-	values(99999, .Z, "TEST NICHT AUSGEFÜLLT")
-	values(99998, .Y, "FRAGE NOCH NICHT VERFÜGBAR")
+	values(99999, .Z, "TEST NICHT AUSGEFÃœLLT")
+	values(99998, .Y, "FRAGE NOCH NICHT VERFÃœGBAR")
 	values(99997, .X, "KEINE ANGABE DURCH PATIENT")
 	values(99973, .A, "UNKNOWN");
 quit;
@@ -61,7 +63,7 @@ quit;
 
 proc format;
 	value $gender_format
-		"m" = "männlich"
+		"m" = "mÃ¤nnlich"
 		"w" = "weiblich"
 		"d" = "divers";
 run;
@@ -83,7 +85,7 @@ run;
 
 
 /*change variable "value" to numeric*/
-/*FEHLERQUELLE: VARIABLEN WERDEN MANUELL IN NUMERISCHE ÜBERSETZT*/
+/*FEHLERQUELLE: VARIABLEN WERDEN MANUELL IN NUMERISCHE ÃœBERSETZT*/
 data crfs_items;
 set crfs_items;
 value = compress(value);
@@ -91,8 +93,8 @@ value = compress(value);
 variable_name = compress(translate(translate(variable_name, "","-"),"",":")); /*get rid of "-" and ":"*/
 if variable_name = "signature" and value ^= "" then value = "1";
 else if variable_name = "signature" and value = "" then value = "0";/*ersetzt den faceroll der bei signatur entsteht durch 1 oder 0*/
-if value = "" then value = "99999"; /*missing: test wurde nicht ausgefüllt*/
-else if upcase(substr(value, 1, 6)) = upcase("sample") then value = "99998"; /*missing: Werte noch nicht verfügbar*/
+if value = "" then value = "99999"; /*missing: test wurde nicht ausgefÃ¼llt*/
+else if upcase(substr(value, 1, 6)) = upcase("sample") then value = "99998"; /*missing: Werte noch nicht verfÃ¼gbar*/
 else if value = "N/A" then value = "99997"; /*Missing: Patient machte keine Angabe*/
 run;
 
@@ -465,7 +467,7 @@ EXAMPLE: bfi-10 becomes bfi_10*/
 
 				array vars {*} _numeric_;
 				do i=1 to dim(vars);
-					if missing(vars[i]) then vars[i] = 99999; /*missing value for "Test nicht ausgefüllt"*/
+					if missing(vars[i]) then vars[i] = 99999; /*missing value for "Test nicht ausgefÃ¼llt"*/
 				end;
 			end;
 			drop i;
